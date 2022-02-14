@@ -1,8 +1,9 @@
-package com.javastudio.tutorial.repository;
+package com.javastudio.tutorial.entity;
 
 import javax.persistence.*;
 
 @Entity
+@Table(name = "PRODUCT")
 @SequenceGenerator(name = "SEQUENCE_GENERATOR", sequenceName = "SEQ_PRODUCT")
 public class Product {
 
