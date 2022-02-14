@@ -6,10 +6,10 @@ import org.springframework.web.bind.annotation.RestController;
 
 @RestController
 @RequestMapping("/api/v1")
-public class HomeResource {
+public class ProductResource {
 
-    @GetMapping("/index")
-    public String index() {
-        return "It works!";
+    @GetMapping("/products")
+    public String findProducts() {
+        return "No product found!";
     }
 }
