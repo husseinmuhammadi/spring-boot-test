@@ -10,6 +10,5 @@ class ApplicationTest {
 
     @Test
     void loadContext() {
-
     }
 }

@@ -10,6 +10,6 @@ public class HomeResource {
 
     @GetMapping("/index")
     public String index() {
-        return "Hello world!";
+        return "It works!";
     }
 }
