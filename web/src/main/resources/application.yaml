@@ -7,3 +7,27 @@ spring:
     initialization-mode: always
     username:
     password:
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: local
+security:
+  policy:
+    password:
+      complexity:
+        min-length: 4
+
+---
+
+spring:
+  config:
+    activate:
+      on-profile: prod
+security:
+  policy:
+    password:
+      complexity:
+        min-length: 8
