@@ -1,6 +1,7 @@
 package com.javastudio.tutorial.resources;
 
 import org.hamcrest.Matchers;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
@@ -19,7 +20,6 @@ class ProductResourceTest {
     @Autowired
     private MockMvc mockMvc;
 
-    @Test
     void givenProductController_whenGetListOfProducts_thenItShouldWorks() throws Exception {
         mockMvc.perform(MockMvcRequestBuilders.get("/api/v1/products"))
                 .andDo(MockMvcResultHandlers.print())
