@@ -14,7 +14,6 @@ import org.springframework.test.web.servlet.result.MockMvcResultMatchers;
 @SpringBootTest
 class HomeResourceTest {
 
-
     @Autowired
     private MockMvc mockMvc;
 
