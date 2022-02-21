@@ -25,6 +25,18 @@ security:
 spring:
   config:
     activate:
+      on-profile: test
+security:
+  policy:
+    password:
+      complexity:
+        min-length: 8
+
+---
+
+spring:
+  config:
+    activate:
       on-profile: prod
 security:
   policy:
