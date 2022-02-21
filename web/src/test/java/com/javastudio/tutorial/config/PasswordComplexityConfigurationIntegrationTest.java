@@ -1,5 +1,6 @@
 package com.javastudio.tutorial.config;
 
+import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -7,15 +8,16 @@ import org.springframework.test.context.ActiveProfiles;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
-@ActiveProfiles("prod")
+@ActiveProfiles("test")
 @SpringBootTest
-class PasswordComplexityConfigurationTest {
+@DisplayName("This is an integration test!")
+class PasswordComplexityConfigurationIntegrationTest {
 
     @Autowired
     private PasswordComplexityConfiguration passwordComplexityConfiguration;
 
     @Test
-    void givenProdEnvironment_whenQueryPasswordComplexity_thenItShouldReturnEight() {
+    void givenTestEnvironment_whenQueryPasswordComplexity_thenItShouldReturnEight() {
         assertThat(passwordComplexityConfiguration.getMinLength()).isEqualTo(8);
     }
 }
